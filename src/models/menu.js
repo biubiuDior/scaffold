@@ -1,6 +1,6 @@
 import memoizeOne from 'memoize-one';
 import isEqual from 'lodash/isEqual';
-import { formatMessage } from 'umi';
+// import { formatMessage } from 'umi';
 import Authorized from '@/utils/Authorized';
 
 const { check } = Authorized;
@@ -8,34 +8,34 @@ const { check } = Authorized;
 // Conversion router to menu.
 function formatter(data, parentAuthority, parentName) {
   return data
-    .map(item => {
-      if (!item.name || !item.path) {
-        return null;
-      }
+      .map(item => {
+        if (!item.name || !item.path) {
+          return null;
+        }
 
-      let locale = 'menu';
-      if (parentName) {
-        locale = `${parentName}.${item.name}`;
-      } else {
-        locale = `menu.${item.name}`;
-      }
+        //   let locale = 'menu';
+        //   if (parentName) {
+        //     locale = `${parentName}.${item.name}`;
+        //   } else {
+        //     locale = `menu.${item.name}`;
+        //   }
 
-      const result = {
-        ...item,
-        name: formatMessage({ id: locale, defaultMessage: item.name }),
-        // name: item.name,
-        locale,
-        authority: item.authority || parentAuthority,
-      };
-      if (item.routes) {
-        const children = formatter(item.routes, item.authority, locale);
-        // Reduce memory usage
-        result.children = children;
-      }
-      delete result.routes;
-      return result;
-    })
-    .filter(item => item);
+        const result = {
+          ...item,
+          // name: formatMessage({ id: locale, defaultMessage: item.name }),
+          name: item.name,
+          // locale,
+          authority: item.authority || parentAuthority,
+        };
+        if (item.routes) {
+          const children = formatter(item.routes, item.authority, item.name);
+          // Reduce memory usage
+          result.children = children;
+        }
+        delete result.routes;
+        return result;
+      })
+      .filter(item => item);
 }
 
 const memoizeOneFormatter = memoizeOne(formatter, isEqual);
@@ -62,10 +62,11 @@ const filterMenuData = menuData => {
     return [];
   }
   return menuData
-    .filter(item => item.name && !item.hideInMenu)
-    .map(item => check(item.authority, getSubMenu(item)))
-    .filter(item => item);
+      .filter(item => item.name && !item.hideInMenu)
+      .map(item => check(item.authority, getSubMenu(item)))
+      .filter(item => item);
 };
+
 /**
  * 获取面包屑映射
  * @param {Object} menuData 菜单配置
@@ -79,7 +80,8 @@ const getBreadcrumbNameMap = menuData => {
         flattenMenuData(menuItem.children);
       }
       // Reduce memory usage
-      routerMap[menuItem.path] = menuItem;
+      // routerMap[menuItem.path] = menuItem;
+      routerMap[menuItem.path] = menuItem.name;
     });
   };
   flattenMenuData(menuData);
@@ -94,16 +96,29 @@ export default {
   state: {
     menuData: [],
     breadcrumbNameMap: {},
+    navMenuData: [],
+    sideMenuData: [],
   },
 
   effects: {
-    *getMenuData({ payload }, { put }) {
+    //头部导航栏菜单
+    *getNavMenuData({ payload }, { put }) {
       const { routes, authority } = payload;
-      const menuData = filterMenuData(memoizeOneFormatter(routes, authority));
-      const breadcrumbNameMap = memoizeOneGetBreadcrumbNameMap(menuData);
+      const navMenuData = filterMenuData(memoizeOneFormatter(routes, authority));
+      const breadcrumbNameMap = memoizeOneGetBreadcrumbNameMap(navMenuData);
       yield put({
         type: 'save',
-        payload: { menuData, breadcrumbNameMap },
+        payload: { navMenuData, breadcrumbNameMap },
+      });
+    },
+
+    //侧边导航栏菜单
+    *getSideMenuData({ payload }, { put }) {
+      const { routes, authority } = payload;
+      const sideMenuData = filterMenuData(memoizeOneFormatter(routes, authority));
+      yield put({
+        type: 'save',
+        payload: { sideMenuData },
       });
     },
   },

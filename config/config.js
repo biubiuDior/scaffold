@@ -11,7 +11,7 @@ const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV);
 export default defineConfig({
   extraPostCSSPlugins: [
     pxtorem({
-      rootValue: 100, //换算基数， 默认100  ，这样的话把根标签的字体规定为1rem为50px,这样就可以从设计稿上量出多少个px直接在代码中写多上px了。
+      rootValue: 100, //换算基数， 默认100  ，这样的话把根标签的字体规定为1rem为50px,这样就可以从设计稿上量出多少个px直接在代码中写多少px了。
       unitPrecision: 5,
       propList: [
         'font-size',

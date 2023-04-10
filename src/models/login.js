@@ -26,7 +26,7 @@ export default {
   state: {
     ...initState,
   },
-  subscriptions: {
+/*  subscriptions: {
     setupHistory({ history, dispatch }) {
       // 监听 history 变化，没登录就跳到/login
       if (window.casStatus) {
@@ -58,7 +58,7 @@ export default {
         });
       }
     },
-  },
+  },*/
   effects: {
     *casLogin({ payload, callback }, { put, call, select }) {
       // 发起登录请求

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6" lang="zh-cn"><![endif]-->
+<!--[if IE 7 ]><html class="ie7" lang="zh-cn"><![endif]--> 
+<!--[if IE 8 ]><html class="ie8" lang="zh-cn"><![endif]--> 
+<!--[if IE 9 ]><html class="ie9" lang="zh-cn"><![endif]--> 
+<!--[if (gt IE 9)|!(IE)]><!--><html class="" lang="zh-cn"><!--<![endif]-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>兼容</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="page-content">
+    <div class='box-compatible'>
+      <div class='content'>
+        <!-- 信息 -->
+        <div class='top'>
+          <img src='./images/empty_3.png' alt="" />
+          <div class='title'>不兼容当前版本浏览器</div>
+          <a href="https://www.microsoft.com/zh-cn/edge">升级我的浏览器</a>
+        </div>
+        <!-- 浏览器列表 -->
+        <div class='list-box'>
+          <div class="list">
+            <div class='list-title'>推荐使用</div>
+            <div class='item'>
+              <div class='img-box'>
+                <img src='https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/chrome/chrome_128x128.png' alt="" />
+              </div>
+              <div class='name'>谷歌浏览器</div>
+              <a href='https://www.google.cn/intl/zh-CN/chrome/' class='btn'>
+                去下载
+              </a>
+            </div>
+            <div class='item'>
+              <div class='img-box'>
+                <img src='https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/firefox/firefox_128x128.png' alt="" />
+              </div>
+              <div class='name'>火狐浏览器</div>
+              <a href='https://www.firefox.com.cn/download/#more' class='btn'>
+                去下载
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class='tip-title'>
+          使用不兼容的浏览器会出现乱码、页面加载错误、无法访问等问题，您是否
+          <a onclick="goWebside()">仍要访问</a>
+        </div>
+        <div class='tip-box'>
+          <div class='title'>
+            网上办事大厅只兼容使用
+            <span class='bold'>Chrome内核</span> 和
+            <span class='bold'>IE9及以上内核</span> 的浏览器
+          </div>
+          <div class='info'>
+            您电脑的操作系统为：
+            <span class='bold' id="operating">Windows 10</span>
+            您当前使用的浏览器为：
+            <span class='bold'>IE</span>
+          </div>
+          <div class='sub-info'>
+            *360浏览器极速模式使用Chrome内核，兼容模式使用IE内核
+          </div>
+        </div>
+        <div class='open-box'>
+          <span class='open-btn' onclick="hideList()">
+            <img src='infoImg' alt="" />
+            点击收起浏览器兼容列表
+          </span>
+        </div>
+        <table id='table'>
+          <tbody>
+            <tr>
+              <th class="type-box">
+                <div class="porelative">
+                  <div class="type-1">浏览器</div>
+                  <svg class="type-line" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"><line x1="0" y1="0" x2="100%" y2="100%" style="stroke:#E5E5E5;stroke-width:1">&nbsp;</line></svg>
+                  <div class='type-2'>操作系统</div>
+                </div>
+              </th>
+              <th>
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/chrome/chrome_128x128.png" alt="" />
+                <div class='name'>谷歌浏览器</div>
+              </th>
+              <th>
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/archive/360-secure/360-secure_128x128.png" alt="" />
+                <div class='name'>360浏览器</div>
+              </th>
+              <th>
+                <img src='https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/archive/cheetah/cheetah_128x128.png' alt="" />
+                <div class='name'>猎豹浏览器</div>
+              </th>
+              <th>
+                <img src='https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/archive/qq_1/qq_1_128x128.png' alt="" />
+                <div class='name'>QQ浏览器</div>
+              </th>
+              <th>
+                <img src='https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/opera/opera_128x128.png' alt="" />
+                <div class='name'>Opera</div>
+              </th>
+              <th>
+                <img src='https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/firefox/firefox_128x128.png' alt="" />
+                <div class='name'>火狐浏览器</div>
+              </th>
+              <th>
+                <img src='https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/edge/edge_128x128.png' alt="" />
+                <div class='name'>IE</div>
+              </th>
+              <th>
+                <img src='https://cdnjs.cloudflare.com/ajax/libs/browser-logos/52.4.2/safari/safari_128x128.png' alt="" />
+                <div class='name'>safari</div>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <img src='./images/windows.png' alt="" />
+                <div class='name'>Windows XP</div>
+              </td>
+              <td class='warn'>
+                <img src='./images/warn.png' alt="" />
+                <div class='name'>有风险</div>
+              </td>
+              <td class='warn'>
+                <img src='./images/warn.png' alt="" />
+                <div class='name'>有风险</div>
+              </td>
+              <td class='warn'>
+                <img src='./images/warn.png' alt="" />
+                <div class='name'>有风险</div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <img src='./images/windows.png' alt="" />
+                <div class='name'>Windows 10</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/windows.png" alt="" />
+                <div class='name'>Windows 8</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <img src='./images/windows.png' alt="" />
+                <div class='name'>Windows 7</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td class='success'>
+                <img src='./images/success.png' alt="" />
+                <div class='name'>支持</div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    function goWebside(){
+      sessionStorage.setItem('compatibleFlag','true');
+      var url=window.location.protocol+'//'+window.location.host+'/#/login';
+				window.location.href=url;
+    }
+    function detectOS() { 
+      var name = "unknown";
+        if(window.navigator.userAgent.indexOf("Android") != -1){
+            name = "Android";
+        }else if(window.navigator.userAgent.indexOf("iPhone") != -1){
+            name = "iPhone";
+        }else if(window.navigator.userAgent.indexOf("SymbianOS") != -1){
+            name = "SymbianOS";
+        }else if(window.navigator.userAgent.indexOf("Windows Phone") != -1){
+            name = "Windows Phone";
+        }else if(window.navigator.userAgent.indexOf("iPad") != -1){
+            name = "iPad";
+        }else if(window.navigator.userAgent.indexOf("iPod") != -1){
+            name = "iPod";
+        }
+        if(name != "unknown"){
+            _AgentInfo.OSname = name;
+            _AgentInfo.deviceType = "mobile";
+            return;
+        }
+        if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1){
+            name="Windows 10";
+        }else if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1){
+            name="Windows 8";
+        }else if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1){
+            name="Windows 7";
+        }else if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1){
+            name="Windows Vista";
+        }else if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1){
+            name="Windows XP";
+        }else if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1){
+            name="Windows 2000";
+        }else if (window.navigator.userAgent.indexOf("Mac") != -1){
+            name="Mac/iOS";
+        }else if (window.navigator.userAgent.indexOf("X11") != -1){
+            name="UNIX";
+        }else if (window.navigator.userAgent.indexOf("Linux") != -1){
+            name="Linux";
+        }
+      return name; 
+    } 
+    function hideList(){
+      var display=document.getElementById('table').style.display;
+      if(display!='none'){
+        document.getElementById('table').style.display='none';
+      }else{
+        document.getElementById('table').style.display='block';
+      }
+      console.log(display);
+      
+    }
+    var operating=detectOS();
+    document.getElementById('operating').innerHTML=operating;
+  </script>
+</body>
+</html>

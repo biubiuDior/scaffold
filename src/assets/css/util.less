@@ -1,0 +1,101 @@
+@import './mixin.less';
+
+// clearfix
+.clearfix                       { .clearfix() }
+// .clear                          { clear: both; display: block; font-size: 0; height: 0; line-height: 0; overflow: hidden; }
+
+//width
+.wh100                          { width  : 100%;  height: 100%; }
+
+//float
+.fl                             { float         : left;}
+.fr                             { float         : right; }
+.overflow   			              { overflow      : hidden; }
+.pr                             { position      : relative; }
+.pa                             { position      : absolute; }
+
+//display
+.hide                           { display       : none;  }
+.block                          { display       : block; }
+.inline-block                   { display       : inline-block; }
+
+.pointer                        {cursor: pointer;}     
+.hover-color:hover              {color: @primary-color;} 
+.vertical-middle                {vertical-align: middle;} 
+.vertical-bottom                {vertical-align: bottom;} 
+
+//margin
+.m-0                            { margin        : 0 }
+.mt-0                           { margin-top    : 0   }
+.mt-xs                          { margin-top    : @xs }
+.mt-sm                          { margin-top    : @sm }
+.mt-md                          { margin-top    : @md }
+.mt-lg                          { margin-top    : @lg }
+.mt-xxl                         { margin-top    : @xxl }
+.mr-xs                          { margin-right  : @xs }
+.mr-sm                          { margin-right  : @sm }
+.mr-md                          { margin-right  : @md }
+.mr-lg                          { margin-right  : @lg }
+.mb-0                           { margin-bottom : 0   }
+.mb-xs                          { margin-bottom : @xs }
+.mb-sm                          { margin-bottom : @sm }
+.mb-md                          { margin-bottom : @md }
+.mb-lg                          { margin-bottom : @lg }
+.ml-xs                          { margin-left   : @xs }
+.ml-sm                          { margin-left   : @sm }
+.ml-md                          { margin-left   : @md }
+.ml-lg                          { margin-left   : @lg }
+
+//padding
+.p-tb                           { padding       : @md 0; }
+.p-10                           { padding       : 10px; }
+.p-20                           { padding       : 20px; }
+.p-30                           { padding       : 30px; }
+.p-sw                           { padding       : @space @wind; }
+.pt-xs                          { padding-top   : @xs }
+.pt-sm                          { padding-top   : @sm }
+.pt-md                          { padding-top   : @md }
+.pt-lg                          { padding-top   : @lg }
+.pr-xs                          { padding-right : @xs }
+.pr-sm                          { padding-right : @sm }
+.pr-md                          { padding-right : @md }
+.pr-lg                          { padding-right : @lg }
+.pb-xs                          { padding-bottom: @xs }
+.pb-sm                          { padding-bottom: @sm }
+.pb-md                          { padding-bottom: @md }
+.pb-lg                          { padding-bottom: @lg }
+.pl-xs                          { padding-left  : @xs }
+.pl-sm                          { padding-left  : @sm }
+.pl-md                          { padding-left  : @md }
+.pl-lg                          { padding-left  : @lg }
+
+//text
+.text-primary                   { color         : @color-primary }
+.text-main                      { color         : @color-primary }
+.text-warning                   { color         : @color-warning }
+.text-success                   { color         : @color-success }
+.text-danger                    { color         : @color-danger  }
+.text-black                     { color         : @color-font-title }
+.text-black-45                  { color         : @color-black-45 }
+.text-black-65                  { color         : @color-black-65 }
+.text-black-85                  { color         : @color-black-85 }
+.text-default                   { color         : @color-default }
+.text-left,.tl                  { text-align    : left        !important }
+.text-center,.tc                { text-align    : center      !important }
+.text-right,.tr                 { text-align    : right       !important }
+
+//字体
+.bold                           { font-weight   : @font-bold; }
+.bold-500                       { font-weight   : @font-bold-500; }
+.font-xs                        { font-size     : @font-xs;   }
+.font-sm                        { font-size     : @font-sm;   }
+.font-md                        { font-size     : @font-md;   }
+.font-lg                        { font-size     : @font-lg;   }
+.font-xl                        { font-size     : @font-xl;   }
+.font-xxl                       { font-size     : @font-xxl;  }
+
+//clamp
+.text-clamp-1                   { .textOverflow() }
+.text-clamp-2                   { .textOverflowMulti(2) }
+.text-clamp-3                   { .textOverflowMulti(3) }
+.text-clamp-4                   { .textOverflowMulti(4) }

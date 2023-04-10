@@ -1,0 +1,78 @@
+
+
+// 控制显示隐藏
+.disNone{
+    display: none;
+  }
+  .wihteBg{
+    background-color: #fff;
+  }
+  .controlBtn {
+    &:hover{
+      .grayIcon{
+        display: inline-block !important;
+      }
+    }
+  }
+  // 增删改按钮
+  .grayIcon{
+    display: none;
+    margin-left: 12px;
+    :global{
+      .ant-btn{
+        padding: 0 6px !important;
+        color: #666 !important;
+        height: auto !important;
+        &:hover{
+          color: #1890ff !important;
+        }
+      }
+    }
+  }
+  // 搜索高亮样式
+  .redColor{
+    color: #f50;
+  }
+  // hover变蓝
+  .blueColor{
+    &:hover{
+      color: #1890ff !important;
+    }
+  }
+  // 添加
+  .treeModa{
+    :global{
+      .ant-modal-header{
+        background: #1890ff !important;
+      }
+      .ant-modal-title{
+        color: #fff !important;
+      }
+      .ant-modal-close-x{
+        color: #fff !important;
+      }
+    }
+  }
+  // 树样式
+  .treeSet{
+    :global{
+      .ant-tree-node-content-wrapper{
+        height: 30px !important;
+        line-height: 30px !important;
+        margin-left: 5px !important;
+        padding: 0px !important;
+     
+         // 为了使标题Hover有背景色，先去掉原来的背景色
+        // &:hover{
+        //   background-color: #fff !important;
+        // }
+      }
+    }
+  }
+  // 只使标题Hover有背景色，增删改按钮无背景色
+  // .hoverBg{
+  //   padding: 4px 6px;
+  //   &:hover{
+  //     background-color: #e6f7ff;
+  //   }
+  // }

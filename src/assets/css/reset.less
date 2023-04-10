@@ -1,0 +1,191 @@
+@import './var.less';
+@import './mixin.less';
+@import './util.less';
+
+/********************* reset-start *********************/
+* {
+  margin: 0;
+  padding: 0;
+  // pointer-events: auto;
+}
+
+html {
+  color: black;
+  // height: 100%;
+  // font-size: 100px;
+  font-size: 14px;
+  font-variant: normal;
+}
+body {
+  background-color: #f0f2f5;
+}
+#root,
+#root > div {
+  height: 100%;
+}
+#root > div > section {
+  min-height: 100%;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: inherit;
+}
+
+fieldset,
+img {
+  border: none;
+}
+
+iframe {
+  display: block;
+}
+
+abbr,
+acronym {
+  font-variant: normal;
+  border: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-weight: 500;
+  font-style: normal;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  font-size: 100%;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+a:focus,
+*:focus {
+  outline: none;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin: 100px auto;
+  background-color: #67cf22;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+/********************* reset-start *********************/

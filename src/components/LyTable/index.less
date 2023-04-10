@@ -1,0 +1,173 @@
+:global {
+  /*列表TD内部空白变小一点*/
+  .yui-table
+    .ant-table-small
+    > .ant-table-content
+    > .ant-table-scroll
+    > .ant-table-header
+    > table
+    > .ant-table-thead
+    > tr
+    > th {
+    height: 44px;
+    line-height: 39px;
+    padding: 0 8px;
+  }
+  .yui-table
+    .ant-table-small
+    > .ant-table-content
+    > .ant-table-scroll
+    > .ant-table-body
+    > table
+    > .ant-table-tbody
+    > tr
+    > td {
+    padding: 8px;
+  }
+  .yui-table
+    .ant-table-small
+    > .ant-table-content
+    > .ant-table-fixed-left
+    > .ant-table-header
+    > table
+    > .ant-table-thead
+    > tr
+    > th {
+    height: 44px;
+    line-height: 39px;
+    padding: 0 8px;
+  }
+  .yui-table
+    .ant-table-small
+    > .ant-table-content
+    > .ant-table-fixed-left
+    > .ant-table-body-outer
+    > .ant-table-body-inner
+    > table
+    > .ant-table-tbody
+    > tr
+    > td {
+    padding: 8px;
+  }
+  .yui-table
+    .ant-table-small
+    > .ant-table-content
+    > .ant-table-fixed-right
+    > .ant-table-header
+    > table
+    > .ant-table-thead
+    > tr
+    > th {
+    height: 44px;
+    line-height: 39px;
+    padding: 0 8px;
+  }
+  .yui-table
+    .ant-table-small
+    > .ant-table-content
+    > .ant-table-fixed-right
+    > .ant-table-body-outer
+    > .ant-table-body-inner
+    > table
+    > .ant-table-tbody
+    > tr
+    > td {
+    padding: 8px;
+  }
+  .yui-table
+    .ant-table-small
+    > .ant-table-content
+    > .ant-table-scroll
+    > .ant-table-body
+    > table
+    > .ant-table-thead
+    > tr
+    > th {
+    height: 44px;
+  }
+  .yui-table {
+    & > .ly-table-buttonBox > button {
+      float: left;
+    }
+    .ant-table-small > .ant-table-content .ant-table-row:last-child td {
+      // border-bottom: 1px solid #e8e8e8;
+    }
+    .ant-table-placeholder {
+      position: absolute;
+      left: 0;
+      top: 44px;
+      right: 1px;
+      z-index: 1;
+    }
+  }
+
+  /*tip提示信息*/
+  .yui-table {
+    .yui-table-tips-div {
+      width: 100%;
+      height: 36px;
+      margin-bottom: 10px;
+      line-height: 36px;
+      border: 1px solid #91d5ff;
+      border-radius: 3px;
+      padding-left: 12px;
+      background-color: #e6f7ff;
+      color: #565c5f;
+      font-size: 12px;
+    }
+    .yui-table-tips-div i {
+      color: #1890ff;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+    .ant-table-pagination.ant-pagination {
+      margin: 10px 0;
+    }
+  }
+
+  .yui-table .ant-table-small.ant-table-bordered .ant-table-fixed-right {
+    border-left: none;
+  }
+  .yui-table .ant-table-small > .ant-table-content > .ant-table-body {
+    margin: 0;
+  }
+}
+
+:global {
+  .yui-expCheckBoxTop {
+    min-height: 30px;
+    margin-bottom: 20px;
+  }
+  .yui-expCheckBoxTop .ant-checkbox-wrapper-disabled,
+  .yui-expCheckBoxTop .ant-checkbox-disabled,
+  .yui-expCheckBoxTop .ant-checkbox-disabled + span,
+  .yui-expCheckBoxTop .ant-checkbox-disabled .ant-checkbox-input {
+    cursor: pointer;
+  }
+  .yui-expCheckBoxTop,
+  .yui-table-sortable-item {
+    .ant-checkbox-disabled .ant-checkbox-inner {
+      background-color: @primary-color;
+      border-color: @primary-color !important;
+    }
+  }
+  .yui-expCheckBoxTop,
+  .yui-table-sortable-item {
+    .ant-checkbox-disabled + span {
+      color: rgba(0, 0, 0, 0.65);
+    }
+  }
+  .yui-expCheckBoxTop,
+  .yui-table-sortable-item {
+    .ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner::after {
+      border-color: #f5f5f5;
+    }
+  }
+  .yui-table-sortable-item.ant-checkbox-wrapper-disabled {
+    z-index: 1000;
+  }
+
+  .yui-table .ant-table-content > .ant-table-scroll {
+    overflow: hidden;
+  }
+}

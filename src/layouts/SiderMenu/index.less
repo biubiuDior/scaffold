@@ -1,0 +1,82 @@
+@import '~antd/lib/style/themes/default.less';
+
+:global {
+  .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+    border: none;
+  }
+  .ant-menu-vertical .ant-menu-item::after,
+  .ant-menu-vertical-left .ant-menu-item::after,
+  .ant-menu-vertical-right .ant-menu-item::after,
+  .ant-menu-inline .ant-menu-item::after {
+    right: calc(100% - 2px);
+  }
+
+  .ly-sider-btn {
+    height: 40px;
+    background: rgba(246, 247, 250, 1);
+    color: #aaa;
+    font-size: 16px;
+    line-height: 40px;
+    // text-align: center;
+    padding-left: 27px;
+    .anticon {
+      cursor: pointer;
+    }
+  }
+  .ly-sider-btn-fixed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    padding-left: 24px;
+    line-height: 40px;
+    border-top: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    background-color: #fff;
+  }
+
+  .ly-side-btn-right {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: -15px;
+    top: 25px;
+    font-size: 15px;
+    border-radius: 50%;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 0.5px solid #eeeff1;
+    z-index: 2;
+    .anticon {
+      transform: scale(0.8);
+    }
+    &:hover {
+      color: #666;
+    }
+  }
+
+  .ly-sider {
+    float: left;
+    .ant-menu-vertical .ant-menu-item,
+    .ant-menu-vertical-left .ant-menu-item,
+    .ant-menu-vertical-right .ant-menu-item,
+    .ant-menu-inline .ant-menu-item,
+    .ant-menu-vertical .ant-menu-submenu-title,
+    .ant-menu-vertical-left .ant-menu-submenu-title,
+    .ant-menu-vertical-right .ant-menu-submenu-title,
+    .ant-menu-inline .ant-menu-submenu-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: Source Han Sans CN-Normal, Source Han Sans CN;
+      font-weight: 400;
+      color: rgba(0,0,0,0.65);
+    }
+    .ant-menu {
+      min-height: 100%;
+    }
+  }
+}

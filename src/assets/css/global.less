@@ -1,0 +1,70 @@
+﻿@import './reset.less';
+/* 页面基本布局样式  */
+/* antd重置样式  */
+/************************页面基本布局样式 start************************/
+// menu
+.top-nav-menu li.ant-menu-item {
+  height: @nav-header-height;
+  line-height: @nav-header-height;
+}
+@media screen and (max-width: 1440px) {
+  .top-nav-menu li.ant-menu-item {
+    height: 56px;
+    line-height: 56px;
+  }
+}
+
+/************************页面基本布局样式 end************************/
+
+/************************antd重置样式 start************************/
+// card
+.ant-card-head-title {
+  font-weight: 700;
+}
+
+// list
+.ant-list-item-meta-avatar {
+  float: left; //ie9
+}
+
+.ant-list-item-meta-title {
+  .textOverflow();
+  & > a {
+    color: @heading-color!important;
+  }
+}
+
+.btn-box {
+  .ant-btn {
+    & + .ant-btn {
+      margin-left: 10px;
+    }
+  }
+}
+
+//modal
+.ant-modal {
+  .ant-modal-header {
+    background: #f5f6fa;
+    border-bottom: none;
+  }
+  .ant-modal-title {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 700;
+  }
+  .ant-modal-close,
+  .ant-modal-close:hover {
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+/************************antd重置样式 end************************/
+/********************* page-start *********************/
+.ly-page {
+  padding: 12px;
+}
+.ly-page-content {
+  background-color: #fff;
+  overflow: hidden;
+}
+/********************* page-end *********************/

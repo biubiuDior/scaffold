@@ -1,0 +1,26 @@
+:global {
+  .ly-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(~'100% - 24px');
+    overflow: hidden;
+    background-color: #fff;
+    margin: 12px;
+    min-height: 350px;
+    .pictureBox {
+      text-align: center;
+      & > h4 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      & > span {
+        font-size: 16px;
+      }
+    }
+    & > button {
+      margin-top: 16px;
+    }
+  }
+}

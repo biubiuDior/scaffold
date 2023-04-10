@@ -1,0 +1,197 @@
+// .ly-selector-singleInput {
+//   position: relative;
+//   .ant-input[disabled] {
+//     background-color: #fff;
+//     border: 1px solid #d9d9d9;
+//     color: rgba(0, 0, 0, 0.65);
+//     cursor: pointer;
+//   }
+//   .ant-input[disabled]:hover {
+//     border-color: var(--primary-color);
+//     border-right-width: 1px !important;
+//   }
+// }
+:global {
+  .ly-Selector {
+    position: relative;
+  }
+  .ly-selector-leftContent {
+    position: absolute !important;
+    top: 42px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto !important;
+
+    .ly-selector-baseContent {
+      padding: 10px 20px;
+      .ant-tree li span.ant-tree-switcher,
+      .ant-tree li span.ant-tree-iconEle {
+        width: 20px;
+      }
+      .ant-tree li span.ant-tree-switcher .ant-tree-switcher-icon,
+      .ant-tree li span.ant-tree-switcher .ant-select-switcher-icon {
+        font-size: 18px;
+        color: #d9d9d9;
+        // line-height: 30px;
+      }
+      .ant-tree li .ant-tree-node-content-wrapper {
+        width: calc(100% - 40px);
+      }
+    }
+  }
+  .ly-selector-singleInput {
+    position: relative;
+    .ant-input[disabled] {
+      background-color: #fff;
+      border: 1px solid #d9d9d9;
+      color: rgba(0, 0, 0, 0.65);
+      cursor: pointer;
+    }
+    .ant-input[disabled]:hover {
+      border-color: var(--primary-color);
+      border-right-width: 1px !important;
+    }
+  }
+  .ly-selector-singleInput-icon {
+    position: absolute;
+    top: 4px;
+    right: 16px;
+    color: #dedede;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  .ly-selector-singleInput-icon.rote {
+    transform: rotate(180deg);
+  }
+  .ly-selector-singleBox {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    z-index: 10;
+  }
+  .ly-selector-multipleBox {
+    // margin: 16px 14px;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    .ly-selectorBase {
+      float: left;
+    }
+  }
+  .ly-selectorBase {
+    position: relative;
+    min-height: 400px;
+    &.hideRight {
+      .ly-selector-baseCenter {
+        margin-right: 0;
+      }
+    }
+    &.hideLeft {
+      .ly-selector-baseCenter {
+        margin-left: 0;
+      }
+    }
+    .ly-selector-searchBox {
+      padding: 10px 20px 0 20px;
+      :global {
+        .ant-input {
+          border: none;
+          border-bottom: 1px solid #d9d9d9;
+          border-radius: 0;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        .ant-collapse {
+          height: 100%;
+          overflow: hidden;
+        }
+        .ant-collapse-item-active {
+          height: calc(~'100% - 46px');
+        }
+        .ant-collapse-content-active {
+          height: calc(~'100% - 46px');
+          .ant-collapse-content-box {
+            height: 100%;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .ly-selector-baseCenter {
+      margin-left: 260px;
+      margin-right: 200px;
+    }
+  }
+  // 多选右边部分
+  .ly-selector-BaseResult {
+    border-left: 1px solid #dadada;
+    float: right;
+    height: 400px;
+    .ly-selector-topMenu {
+      position: relative;
+      height: 34px;
+      border-bottom: 1px solid #dadada;
+      background-color: #f5f5f5;
+      .ly-selector-checkAll {
+        position: absolute;
+        top: 6px;
+        left: 14px;
+        a {
+          margin-left: 8px;
+        }
+      }
+      & > span {
+        position: absolute;
+        right: 14px;
+        top: 6px;
+        a {
+          margin: 0 5px;
+        }
+      }
+    }
+    .ly-selector-content {
+      padding: 14px 0 0 12px;
+      .ant-checkbox-group {
+        width: 100%;
+        // .ant-checkbox-wrapper {
+        //   padding: 3px 0 3px 5px;
+        // }
+        //   .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+        //     margin-left: 0;
+        //   }
+      }
+    }
+  }
+  .ly-selector-dragList {
+    width: 100%;
+    padding-right: 10px;
+    //拖拽checkbox
+    .ly-selector-dragCheckbox {
+      background-color: #fff;
+      border: none;
+    }
+  }
+  .ly-selector-dragCheckbox {
+    background-color: #e6f7ff;
+    border: 1px dashed var(--primary-color);
+    z-index: 1000;
+    padding: 3px 5px 3px 5px;
+    & > label {
+      float: left;
+    }
+    & > img {
+      float: left;
+      margin: 3px 4px 0 10px;
+    }
+    & > span.name {
+      float: left;
+    }
+    & > span.phone {
+      float: right;
+    }
+  }
+}

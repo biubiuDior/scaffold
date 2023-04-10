@@ -1,0 +1,40 @@
+:global {
+  .ly-title {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #dddddd;
+    overflow: hidden;
+    :global {
+      .anticon,
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+  .ly-title-content {
+    position: relative;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    padding-left: 16px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 16px;
+      margin-top: -8px;
+      border-right: 4px solid #397ef0;
+    }
+  }
+  .ly-title-extra-content {
+    float: right;
+  }
+  .ly-title-content-desc {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #999;
+  }
+}

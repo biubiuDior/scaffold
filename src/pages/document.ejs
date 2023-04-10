@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<script>
+		// location.origin在ie中的兼容性处理
+		if (!window.location.origin) {
+		  window.location.origin =
+			window.location.protocol +
+			'//' +
+			window.location.hostname +
+			(window.location.port ? ':' + window.location.port : '');
+		}
+ 		 // 环境变量：单点登录、网关、运维监控
+		window.apmEnable='_apmEnable'
+		window.apmHost='_apmHost'
+		window.casStatus = _casStatus || false;
+		window.casLogoutUrl = '_casLogoutUrl';
+		window.gateway_version = _gateway_version || false;
+		window.cas_url = '_cas_url';
+		
+  
+		// 测试
+		// window.casStatus = true;
+		// window.casLogoutUrl = 'https:\/\/192.168.35.12:4103\/yuapServer\/login';
+		// window.gateway_version = true;
+		// window.cas_url = 'https:\/\/192.168.35.12:4103\/lyuapServer\/login';
+		// window.findProject = 'http://192.168.35.12:380/ycsrp/index';
+		// 账号：lilu  密码：123456Aa
+
+	  </script>
+</head>
+
+<body>
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		// IE
+		if (agent.indexOf('trident') > 0) {
+			var date=sessionStorage.getItem('compatibleFlag');
+			if(!date){
+				function IEVersion() {
+				if (!window.XMLHttpRequest) return 6;
+				if (!document.querySelector) return 7;
+				if (!document.addEventListener) return 8;
+				if (!window.atob) return 9;
+				if (document.addEventListener && window.atob) return 10;
+				return 11;
+			}
+			var version=IEVersion();
+			if(version<9){
+				var url=window.location.protocol+'//'+window.location.host+'/compatible/compatible.html';
+				console.log(url);
+				window.location.href=url;
+			}
+			}
+			
+		}
+		
+	</script>
+	<noscript>Sorry, we need js to run correctly!</noscript>
+	<div id="<%= context.config.mountElementId %>"></div>
+	
+</body>
+<script>
+	if (!String.prototype.includes) {
+		String.prototype.includes = function (search, start) {
+			'use strict';
+			if (search instanceof RegExp) {
+				throw TypeError('first argument must not be a RegExp');
+			}
+			if (start === undefined) { start = 0; }
+			return this.indexOf(search, start) !== -1;
+		};
+	}
+</script>
+
+
+</html>

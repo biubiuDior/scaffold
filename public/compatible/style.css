@@ -1,0 +1,241 @@
+/* 浏览器兼容页 */
+.box-compatible {
+  padding: 100px 20px;
+}
+.line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.content {
+  width: 1000px;
+  margin: 0 auto;
+}
+.top {
+  text-align: center;
+  font-size: 12px;
+  color: #333333;
+}
+.top img {
+  width: 534px;
+  vertical-align: top;
+}
+.top .title {
+  margin: 30px 0 10px;
+  font-size: 30px;
+}
+.top a {
+  color: #2cbdfe;
+  cursor: pointer;
+}
+.list-box {
+  margin-top: 20px;
+  text-align: center;
+}
+.list-title {
+  text-align: left;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+.list {
+  display: inline-block;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.item {
+  float: left;
+  width: 125px;
+  text-align: center;
+  cursor: pointer;
+}
+.item .img-box {
+  display: inline-block;
+  margin: 20px 0;
+  width: 80px;
+  height: 80px;
+}
+.item img {
+  width: 80px;
+  height: 80px;
+  transition: all 0.3s;
+}
+.item .img-box.small {
+  padding: 5px;
+}
+.item .img-box.small img {
+  height: 70px;
+  width: 70px;
+}
+.btn {
+  display: none;
+  margin-top: 20px;
+  height: 30px;
+  width: 100px;
+  color: #fff;
+  background-color: #19b5fd;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 14px;
+  box-shadow: 0 5px 5px #c9e7fe;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: #10c4fe;
+}
+.item:hover .name {
+  margin-bottom: 0;
+}
+.item:hover img {
+  transform: scale(1.3);
+}
+.item:hover .btn {
+  display: inline-block;
+}
+.list .name {
+  font-size: 16px;
+  color: #333;
+  white-space: nowrap;
+  margin-bottom: 50px;
+}
+.tip-title {
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+  margin-top: 60px;
+}
+.tip-title a {
+  color: #16b8fe;
+}
+.tip-box {
+  margin: 40px auto;
+  width: 560px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f5f5f6;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.tip-box .bold {
+  color: #000;
+  font-weight: bold;
+}
+.tip-box .title {
+  color: #676764;
+  font-size: 14px;
+}
+.tip-box .info {
+  margin-top: 10px;
+  color: #969a96;
+}
+.tip-box .sub-info {
+  margin-top: 10px;
+  color: #bcbbbb;
+}
+.open-box {
+  margin: 20px 0;
+  text-align: center;
+  color: #4a92df;
+  font-size: 12px;
+}
+.open-box .open-btn {
+  cursor: pointer;
+}
+.open-box .open-btn img {
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  color: #333333;
+  font-size: 14px;
+}
+
+table td,
+table th {
+  /* position: relative; */
+  width: 10%;
+  padding: 8px 10px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f8f8f8;
+}
+
+table td:last-of-type,
+table th:last-of-type {
+  border-right: none;
+}
+
+table tr:last-of-type td {
+  border-bottom: none;
+}
+
+table td:first-of-type,
+table th {
+  background-color: #fff;
+}
+
+table td:first-of-type,
+table th:first-of-type {
+  width: 20%;
+}
+.porelative {
+  position: relative;
+}
+
+.type-line {
+  position: absolute;
+  width: 200px;
+  height: 65px;
+  top: -16px;
+  left: -10px;
+}
+.type-box .type-1 {
+  height: 50%;
+  width: 50%;
+  margin-left: 50%;
+}
+.type-box .type-2 {
+  height: 50%;
+  width: 50%;
+}
+table th img {
+  height: 30px;
+  width: 30px;
+  vertical-align: top;
+}
+table th .name {
+  font-size: 12px;
+  color: #333330;
+  margin-top: 6px;
+}
+
+table td img {
+  width: 20px;
+  vertical-align: top;
+}
+table td .name {
+  font-size: 14px;
+  margin-top: 4px;
+}
+table td:first-of-type img {
+  width: 30px;
+}
+table td.warn {
+  color: #ff9902;
+  background-color: #fff;
+}
+table td.success {
+  color: #4cc54f;
+  background-color: #fff;
+}
